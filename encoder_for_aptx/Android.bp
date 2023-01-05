@@ -1,5 +1,6 @@
-cc_library_static {
-    name: "libaptx_enc",
+cc_library_shared {
+    name: "libaptX_encoder",
+    system_ext_specific: true,
     host_supported: true,
     export_include_dirs: ["include"],
     srcs: [
@@ -9,11 +10,4 @@ cc_library_static {
         "src/QuantiseDifference.c",
     ],
     cflags: ["-O2", "-Werror", "-Wall", "-Wextra"],
-    min_sdk_version: "Tiramisu",
-    apex_available: [
-        "com.android.btservices",
-    ],
-    visibility: [
-        "//packages/modules/Bluetooth:__subpackages__",
-    ],
 }
