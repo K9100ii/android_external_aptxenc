@@ -1,0 +1,4 @@
+subdirs = [
+    "encoder_for_aptx",
+    "encoder_for_aptxhd",
+]
